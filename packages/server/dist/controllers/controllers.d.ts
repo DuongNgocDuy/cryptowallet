@@ -1,0 +1,18 @@
+import { Request, Response } from 'express';
+export declare function CryptowalletController_create(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getCryptoWalletByID(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAllCryptoWallet(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_createAdmin(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_createTrader(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_createModerator(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_createWallet(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAdminById(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getModeratorById(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getTraderById(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getWalletHistoryById(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAllModerators(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAllTraders(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAllWallets(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_getAllModels(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_makeTransaction(req: Request, res: Response): Promise<void>;
+export declare function CryptowalletController_createMoney(req: Request, res: Response): Promise<void>;

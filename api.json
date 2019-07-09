@@ -1,0 +1,85 @@
+[
+  {
+    "function": "create",
+    "controller": "CryptowalletController",
+    "verb": "post"
+  },
+  {
+    "function": "getCryptoWalletByID",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllCryptoWallet",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "createAdmin",
+    "controller": "CryptowalletController",
+    "verb": "post"
+  },
+  {
+    "function": "createTrader",
+    "controller": "CryptowalletController",
+    "verb": "post"
+  },
+  {
+    "function": "createModerator",
+    "controller": "CryptowalletController",
+    "verb": "post"
+  },
+  {
+    "function": "createWallet",
+    "controller": "CryptowalletController",
+    "verb": "post"
+  },
+  {
+    "function": "getAdminById",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getModeratorById",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getTraderById",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getWalletHistoryById",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllModerators",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllTraders",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllWallets",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllModels",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "makeTransaction",
+    "controller": "CryptowalletController"
+  },
+  {
+    "function": "createMoney",
+    "controller": "CryptowalletController"
+  }
+]

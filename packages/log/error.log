@@ -1,0 +1,210 @@
+Debugger listening on ws://0.0.0.0:8888/d3990e3b-8f1f-43a3-a607-16c22000734b
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/13fef57d-e9fa-4d94-b8b8-cd344df61b82
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/a978b225-cc9f-4b45-b76d-35e3b11fd814
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/917320c8-5436-47a8-abe3-73a1778cbda6
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/55437015-6b17-4902-a803-b9dfc7f34d4f
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/5e1f59d3-1fdc-4a6c-8ee9-4edf3b711163
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/a22e11c7-2403-4722-99ba-098c846439ca
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/5de14b19-5f9b-47ae-a130-e4dc4a8930a1
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/5fc5a3b2-7bb7-40af-ab10-c50a9544f15d
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/53203ef3-5d02-4210-bb71-13c31675ac36
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/a7e0c586-445f-4c08-933c-b09108239bd6
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/b9136c37-b212-4725-bb92-cf645401b0ed
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/1520e505-a646-4d71-b918-5a6826c80cfa
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/87ef0d3d-26df-4082-9245-29dcbc359dcf
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/83d86e8c-b66c-44eb-ad85-8260f8f5bbfe
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/ab265066-b608-4f4c-af5a-25c8b0c81cec
+For help see https://nodejs.org/en/docs/inspector
+TypeError: yup.Date is not a function
+    at /home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:227:16
+    at Object.<anonymous> (/home/duydn/cryptowallet/packages/cryptowallet-cc/src/cryptowallet.controller.ts:17:1)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Module.require (module.js:587:17)
+    at Module.Hook._require.Module.require (/home/duydn/cryptowallet/node_modules/require-in-the-middle/index.js:70:37)
+    at require (internal/module.js:11:18)
+Debugger listening on ws://0.0.0.0:8888/39a9ee76-5563-4536-81f3-c83852ccc72f
+For help see https://nodejs.org/en/docs/inspector
