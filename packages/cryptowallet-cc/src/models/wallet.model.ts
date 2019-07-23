@@ -28,6 +28,7 @@ export class Wallet extends ConvectorModel<Wallet> {
   public balance: number = 0;
 
   public transactionDetails: Array<{
+    transactionID: string,
     sender: string,
     receiver: string,
     amount: number,

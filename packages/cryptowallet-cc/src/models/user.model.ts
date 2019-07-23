@@ -7,10 +7,10 @@ import {
   Validate
 } from '@worldsibu/convector-core-model';
 
-export class Trader extends ConvectorModel<Trader> {
+export class User extends ConvectorModel<User> {
   @ReadOnly()
   @Required()
-  public readonly type = 'io.worldsibu.trader';
+  public readonly type = 'io.worldsibu.user';
 
   @Required()
   @Validate(yup.string())
@@ -22,9 +22,4 @@ export class Trader extends ConvectorModel<Trader> {
 
   @Validate(yup.string())
   public walletID: string;
-
-  @ReadOnly()
-  @Required()
-  @Validate(yup.string())
-  public readonly role: string = 'Trader';
 }

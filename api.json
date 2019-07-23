@@ -20,12 +20,7 @@
     "verb": "post"
   },
   {
-    "function": "createTrader",
-    "controller": "CryptowalletController",
-    "verb": "post"
-  },
-  {
-    "function": "createModerator",
+    "function": "createUser",
     "controller": "CryptowalletController",
     "verb": "post"
   },
@@ -40,12 +35,7 @@
     "verb": "get"
   },
   {
-    "function": "getModeratorById",
-    "controller": "CryptowalletController",
-    "verb": "get"
-  },
-  {
-    "function": "getTraderById",
+    "function": "getUserById",
     "controller": "CryptowalletController",
     "verb": "get"
   },
@@ -55,12 +45,7 @@
     "verb": "get"
   },
   {
-    "function": "getAllModerators",
-    "controller": "CryptowalletController",
-    "verb": "get"
-  },
-  {
-    "function": "getAllTraders",
+    "function": "getAllUsers",
     "controller": "CryptowalletController",
     "verb": "get"
   },
@@ -71,6 +56,11 @@
   },
   {
     "function": "getAllModels",
+    "controller": "CryptowalletController",
+    "verb": "get"
+  },
+  {
+    "function": "getWalletIDFromEmail",
     "controller": "CryptowalletController",
     "verb": "get"
   },

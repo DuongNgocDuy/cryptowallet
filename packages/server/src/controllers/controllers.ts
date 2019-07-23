@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { CryptowalletControllerBackEnd } from '../convector';
 
 
-export async function CryptowalletController_create(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_create_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
@@ -13,7 +13,7 @@ export async function CryptowalletController_create(req: Request, res: Response)
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getCryptoWalletByID(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getCryptoWalletByID_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -24,7 +24,7 @@ export async function CryptowalletController_getCryptoWalletByID(req: Request, r
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getAllCryptoWallet(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getAllCryptoWallet_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -35,7 +35,7 @@ export async function CryptowalletController_getAllCryptoWallet(req: Request, re
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_createAdmin(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_createAdmin_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
@@ -46,29 +46,18 @@ export async function CryptowalletController_createAdmin(req: Request, res: Resp
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_createTrader(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_createUser_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
-                .createTrader(params.trader));
+                .createUser(params.user));
             
     } catch(ex) {
-        console.log('Error post CryptowalletController_createTrader', ex.stack);
+        console.log('Error post CryptowalletController_createUser', ex.stack);
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_createModerator(req: Request, res: Response): Promise<void>{
-    try{
-        let params = req.body;
-            res.status(200).send(await CryptowalletControllerBackEnd
-                .createModerator(params.moderator));
-            
-    } catch(ex) {
-        console.log('Error post CryptowalletController_createModerator', ex.stack);
-        res.status(500).send(ex);
-    }
-}
-export async function CryptowalletController_createWallet(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_createWallet_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
@@ -79,7 +68,7 @@ export async function CryptowalletController_createWallet(req: Request, res: Res
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getAdminById(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getAdminById_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -90,29 +79,18 @@ export async function CryptowalletController_getAdminById(req: Request, res: Res
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getModeratorById(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getUserById_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
-            .getModeratorById(params.modID));
+            .getUserById(params.userID));
         
     } catch(ex) {
-        console.log('Error get CryptowalletController_getModeratorById', ex.stack);
+        console.log('Error get CryptowalletController_getUserById', ex.stack);
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getTraderById(req: Request, res: Response): Promise<void>{
-    try{
-        let params = req.params;
-        res.status(200).send(await CryptowalletControllerBackEnd
-            .getTraderById(params.traderID));
-        
-    } catch(ex) {
-        console.log('Error get CryptowalletController_getTraderById', ex.stack);
-        res.status(500).send(ex);
-    }
-}
-export async function CryptowalletController_getWalletHistoryById(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getWalletHistoryById_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -123,29 +101,18 @@ export async function CryptowalletController_getWalletHistoryById(req: Request, 
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getAllModerators(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getAllUsers_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
-            .getAllModerators());
+            .getAllUsers());
         
     } catch(ex) {
-        console.log('Error get CryptowalletController_getAllModerators', ex.stack);
+        console.log('Error get CryptowalletController_getAllUsers', ex.stack);
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getAllTraders(req: Request, res: Response): Promise<void>{
-    try{
-        let params = req.params;
-        res.status(200).send(await CryptowalletControllerBackEnd
-            .getAllTraders());
-        
-    } catch(ex) {
-        console.log('Error get CryptowalletController_getAllTraders', ex.stack);
-        res.status(500).send(ex);
-    }
-}
-export async function CryptowalletController_getAllWallets(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getAllWallets_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -156,7 +123,7 @@ export async function CryptowalletController_getAllWallets(req: Request, res: Re
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_getAllModels(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getAllModels_get(req: Request, res: Response): Promise<void>{
     try{
         let params = req.params;
         res.status(200).send(await CryptowalletControllerBackEnd
@@ -167,22 +134,33 @@ export async function CryptowalletController_getAllModels(req: Request, res: Res
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_makeTransaction(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_getWalletIDFromEmail_get(req: Request, res: Response): Promise<void>{
+    try{
+        let params = req.params;
+        res.status(200).send(await CryptowalletControllerBackEnd
+            .getWalletIDFromEmail(params.userID));
+        
+    } catch(ex) {
+        console.log('Error get CryptowalletController_getWalletIDFromEmail', ex.stack);
+        res.status(500).send(ex);
+    }
+}
+export async function CryptowalletController_makeTransaction_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
-                .makeTransaction(params.senderID,params.receiverID,params.amount,params.creationDate,params.content));
+                .makeTransaction(params.senderID,params.receiverID,params.amount,params.transactionID,params.creationDate,params.content));
             
     } catch(ex) {
         console.log('Error post CryptowalletController_makeTransaction', ex.stack);
         res.status(500).send(ex);
     }
 }
-export async function CryptowalletController_createMoney(req: Request, res: Response): Promise<void>{
+export async function CryptowalletController_createMoney_post(req: Request, res: Response): Promise<void>{
     try{
         let params = req.body;
             res.status(200).send(await CryptowalletControllerBackEnd
-                .createMoney(params.adminID,params.reciverID,params.amountToCreate,params.content,params.creationDate));
+                .createMoney(params.adminID,params.reciverID,params.amountToCreate,params.transactionID,params.content,params.creationDate));
             
     } catch(ex) {
         console.log('Error post CryptowalletController_createMoney', ex.stack);

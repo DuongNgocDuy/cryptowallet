@@ -5,6 +5,7 @@ export declare class Wallet extends ConvectorModel<Wallet> {
     ownerName: string;
     balance: number;
     transactionDetails: Array<{
+        transactionID: string;
         sender: string;
         receiver: string;
         amount: number;

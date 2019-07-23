@@ -5,8 +5,7 @@ var yup = require("yup");
 var convector_core_1 = require("@worldsibu/convector-core");
 var cryptowallet_model_1 = require("./models/cryptowallet.model");
 var admin_model_1 = require("./models/admin.model");
-var moderator_model_1 = require("./models/moderator.model");
-var trader_model_1 = require("./models/trader.model");
+var user_model_1 = require("./models/user.model");
 var wallet_model_1 = require("./models/wallet.model");
 var CryptowalletController = (function (_super) {
     tslib_1.__extends(CryptowalletController, _super);
@@ -38,14 +37,14 @@ var CryptowalletController = (function (_super) {
                         return [2, crytowallet];
                     case 2:
                         error_1 = _a.sent();
-                        console.log('MEGAFYK ERROR:', error_1);
+                        console.log('ERROR HAPPENED: ', error_1);
                         return [3, 3];
                     case 3: return [2];
                 }
             });
         });
     };
-    CryptowalletController.prototype.getAllCrytoWalle = function () {
+    CryptowalletController.prototype.getAllCryptoWallet = function () {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
             var crytowallet, error_2;
             return tslib_1.__generator(this, function (_a) {
@@ -58,7 +57,7 @@ var CryptowalletController = (function (_super) {
                         return [2, crytowallet];
                     case 2:
                         error_2 = _a.sent();
-                        console.log('MEGAFYK ERROR:', error_2);
+                        console.log('ERROR HAPPENED: ', error_2);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -78,47 +77,27 @@ var CryptowalletController = (function (_super) {
                         return [3, 3];
                     case 2:
                         error_3 = _a.sent();
-                        console.log('MEGAFYK LOGGER:', error_3);
+                        console.log('ERROR HAPPENED: ', error_3);
                         return [3, 3];
                     case 3: return [2];
                 }
             });
         });
     };
-    CryptowalletController.prototype.createTrader = function (trader) {
+    CryptowalletController.prototype.createUser = function (user) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
             var error_4;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4, trader.save()];
+                        return [4, user.save()];
                     case 1:
                         _a.sent();
                         return [3, 3];
                     case 2:
                         error_4 = _a.sent();
-                        console.log('MEGAFYK LOGGER:', error_4);
-                        return [3, 3];
-                    case 3: return [2];
-                }
-            });
-        });
-    };
-    CryptowalletController.prototype.createModerator = function (moderator) {
-        return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var error_5;
-            return tslib_1.__generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4, moderator.save()];
-                    case 1:
-                        _a.sent();
-                        return [3, 3];
-                    case 2:
-                        error_5 = _a.sent();
-                        console.log('MEGAFYK LOGGER:', error_5);
+                        console.log('ERROR HAPPENED: ', error_4);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -127,7 +106,7 @@ var CryptowalletController = (function (_super) {
     };
     CryptowalletController.prototype.createWallet = function (wallet) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var error_6;
+            var error_5;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -137,8 +116,8 @@ var CryptowalletController = (function (_super) {
                         _a.sent();
                         return [3, 3];
                     case 2:
-                        error_6 = _a.sent();
-                        console.log('MEGAFYK LOGGER:', error_6);
+                        error_5 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_5);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -147,7 +126,7 @@ var CryptowalletController = (function (_super) {
     };
     CryptowalletController.prototype.getAdminById = function (adminID) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var user, error_7;
+            var user, error_6;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -157,48 +136,28 @@ var CryptowalletController = (function (_super) {
                         user = _a.sent();
                         return [2, user];
                     case 2:
+                        error_6 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_6);
+                        return [3, 3];
+                    case 3: return [2];
+                }
+            });
+        });
+    };
+    CryptowalletController.prototype.getUserById = function (userID) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var user, error_7;
+            return tslib_1.__generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4, user_model_1.User.getOne(userID)];
+                    case 1:
+                        user = _a.sent();
+                        return [2, user];
+                    case 2:
                         error_7 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_7);
-                        return [3, 3];
-                    case 3: return [2];
-                }
-            });
-        });
-    };
-    CryptowalletController.prototype.getModeratorById = function (modID) {
-        return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var mod, error_8;
-            return tslib_1.__generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4, moderator_model_1.Moderator.getOne(modID)];
-                    case 1:
-                        mod = _a.sent();
-                        return [2, mod];
-                    case 2:
-                        error_8 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_8);
-                        return [3, 3];
-                    case 3: return [2];
-                }
-            });
-        });
-    };
-    CryptowalletController.prototype.getTraderById = function (traderID) {
-        return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var trader, error_9;
-            return tslib_1.__generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4, trader_model_1.Trader.getOne(traderID)];
-                    case 1:
-                        trader = _a.sent();
-                        return [2, trader];
-                    case 2:
-                        error_9 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_9);
+                        console.log('ERROR HAPPENED: ', error_7);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -207,7 +166,7 @@ var CryptowalletController = (function (_super) {
     };
     CryptowalletController.prototype.getWalletHistoryById = function (walletID) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var wallet, error_10;
+            var wallet, error_8;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -217,48 +176,28 @@ var CryptowalletController = (function (_super) {
                         wallet = _a.sent();
                         return [2, wallet];
                     case 2:
-                        error_10 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_10);
+                        error_8 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_8);
                         return [3, 3];
                     case 3: return [2];
                 }
             });
         });
     };
-    CryptowalletController.prototype.getAllModerators = function () {
+    CryptowalletController.prototype.getAllUsers = function () {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var moderators, error_11;
+            var users, error_9;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4, moderator_model_1.Moderator.getAll('io.worldsibu.moderator')];
+                        return [4, user_model_1.User.getAll('io.worldsibu.user')];
                     case 1:
-                        moderators = _a.sent();
-                        return [2, moderators];
+                        users = _a.sent();
+                        return [2, users];
                     case 2:
-                        error_11 = _a.sent();
-                        console.log("MEGAFYK ERROR:", error_11);
-                        return [3, 3];
-                    case 3: return [2];
-                }
-            });
-        });
-    };
-    CryptowalletController.prototype.getAllTraders = function () {
-        return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var traders, error_12;
-            return tslib_1.__generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4, trader_model_1.Trader.getAll('io.worldsibu.trader')];
-                    case 1:
-                        traders = _a.sent();
-                        return [2, traders];
-                    case 2:
-                        error_12 = _a.sent();
-                        console.log("MEGAFYK ERROR:", error_12);
+                        error_9 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_9);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -267,7 +206,7 @@ var CryptowalletController = (function (_super) {
     };
     CryptowalletController.prototype.getAllWallets = function () {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var wallets, error_13;
+            var wallets, error_10;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -277,8 +216,8 @@ var CryptowalletController = (function (_super) {
                         wallets = _a.sent();
                         return [2, wallets];
                     case 2:
-                        error_13 = _a.sent();
-                        console.log("MEGAFYK ERROR:", error_13);
+                        error_10 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_10);
                         return [3, 3];
                     case 3: return [2];
                 }
@@ -287,23 +226,19 @@ var CryptowalletController = (function (_super) {
     };
     CryptowalletController.prototype.getAllModels = function () {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var storedAdmins, storedModerators, storedTraders, storedWallets;
+            var storedAdmins, storedUsers, storedWallets;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4, admin_model_1.Admin.getAll('io.worldsibu.admin')];
                     case 1:
                         storedAdmins = _a.sent();
                         console.log(storedAdmins);
-                        return [4, moderator_model_1.Moderator.getAll('io.worldsibu.moderator')];
+                        return [4, user_model_1.User.getAll('io.worldsibu.user')];
                     case 2:
-                        storedModerators = _a.sent();
-                        console.log(storedModerators);
-                        return [4, trader_model_1.Trader.getAll('io.worldsibu.trader')];
-                    case 3:
-                        storedTraders = _a.sent();
-                        console.log(storedTraders);
+                        storedUsers = _a.sent();
+                        console.log(storedUsers);
                         return [4, wallet_model_1.Wallet.getAll('io.worldsibu.wallet')];
-                    case 4:
+                    case 3:
                         storedWallets = _a.sent();
                         console.log(storedWallets);
                         return [2];
@@ -311,9 +246,29 @@ var CryptowalletController = (function (_super) {
             });
         });
     };
-    CryptowalletController.prototype.makeTransaction = function (senderID, receiverID, amount, creationDate, content) {
+    CryptowalletController.prototype.getWalletIDFromEmail = function (userID) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var senderWallet, receiverWallet, error_14;
+            var user, error_11;
+            return tslib_1.__generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4, user_model_1.User.getOne(userID)];
+                    case 1:
+                        user = _a.sent();
+                        return [2, user.walletID];
+                    case 2:
+                        error_11 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_11);
+                        return [3, 3];
+                    case 3: return [2];
+                }
+            });
+        });
+    };
+    CryptowalletController.prototype.makeTransaction = function (senderID, receiverID, amount, transactionID, creationDate, content) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var senderWallet, receiverWallet, error_12;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -326,6 +281,7 @@ var CryptowalletController = (function (_super) {
                         receiverWallet = _a.sent();
                         senderWallet.balance = senderWallet.balance - amount;
                         senderWallet.transactionDetails.push({
+                            transactionID: transactionID,
                             sender: senderWallet.ownerName,
                             receiver: receiverWallet.ownerName,
                             amount: amount,
@@ -334,6 +290,7 @@ var CryptowalletController = (function (_super) {
                         });
                         receiverWallet.balance += amount;
                         receiverWallet.transactionDetails.push({
+                            transactionID: transactionID,
                             sender: senderWallet.ownerName,
                             receiver: receiverWallet.ownerName,
                             amount: amount,
@@ -348,17 +305,17 @@ var CryptowalletController = (function (_super) {
                         _a.sent();
                         return [3, 6];
                     case 5:
-                        error_14 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_14);
+                        error_12 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_12);
                         return [3, 6];
                     case 6: return [2];
                 }
             });
         });
     };
-    CryptowalletController.prototype.createMoney = function (adminID, reciverID, amountToCreate, content, creationDate) {
+    CryptowalletController.prototype.createMoney = function (adminID, reciverID, amountToCreate, transactionID, content, creationDate) {
         return tslib_1.__awaiter(this, void 0, void 0, function () {
-            var admin, receiverWallet, error_15;
+            var admin, receiverWallet, error_13;
             return tslib_1.__generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -372,6 +329,7 @@ var CryptowalletController = (function (_super) {
                         if (admin.role === 'admin') {
                             receiverWallet.balance += amountToCreate;
                             receiverWallet.transactionDetails.push({
+                                transactionID: transactionID,
                                 sender: admin.name,
                                 receiver: receiverWallet.ownerName,
                                 amount: amountToCreate,
@@ -384,8 +342,8 @@ var CryptowalletController = (function (_super) {
                         _a.sent();
                         return [3, 5];
                     case 4:
-                        error_15 = _a.sent();
-                        console.log('MEGAFYK ERROR', error_15);
+                        error_13 = _a.sent();
+                        console.log('ERROR HAPPENED: ', error_13);
                         return [3, 5];
                     case 5: return [2];
                 }
@@ -402,19 +360,15 @@ var CryptowalletController = (function (_super) {
     ], CryptowalletController.prototype, "getCryptoWalletByID", null);
     tslib_1.__decorate([
         convector_core_1.Invokable()
-    ], CryptowalletController.prototype, "getAllCrytoWalle", null);
+    ], CryptowalletController.prototype, "getAllCryptoWallet", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(admin_model_1.Admin))
     ], CryptowalletController.prototype, "createAdmin", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),
-        tslib_1.__param(0, convector_core_1.Param(trader_model_1.Trader))
-    ], CryptowalletController.prototype, "createTrader", null);
-    tslib_1.__decorate([
-        convector_core_1.Invokable(),
-        tslib_1.__param(0, convector_core_1.Param(moderator_model_1.Moderator))
-    ], CryptowalletController.prototype, "createModerator", null);
+        tslib_1.__param(0, convector_core_1.Param(user_model_1.User))
+    ], CryptowalletController.prototype, "createUser", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(wallet_model_1.Wallet))
@@ -426,21 +380,14 @@ var CryptowalletController = (function (_super) {
     tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(yup.string()))
-    ], CryptowalletController.prototype, "getModeratorById", null);
-    tslib_1.__decorate([
-        convector_core_1.Invokable(),
-        tslib_1.__param(0, convector_core_1.Param(yup.string()))
-    ], CryptowalletController.prototype, "getTraderById", null);
+    ], CryptowalletController.prototype, "getUserById", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(yup.string()))
     ], CryptowalletController.prototype, "getWalletHistoryById", null);
     tslib_1.__decorate([
         convector_core_1.Invokable()
-    ], CryptowalletController.prototype, "getAllModerators", null);
-    tslib_1.__decorate([
-        convector_core_1.Invokable()
-    ], CryptowalletController.prototype, "getAllTraders", null);
+    ], CryptowalletController.prototype, "getAllUsers", null);
     tslib_1.__decorate([
         convector_core_1.Invokable()
     ], CryptowalletController.prototype, "getAllWallets", null);
@@ -448,12 +395,16 @@ var CryptowalletController = (function (_super) {
         convector_core_1.Invokable()
     ], CryptowalletController.prototype, "getAllModels", null);
     tslib_1.__decorate([
+        tslib_1.__param(0, convector_core_1.Param(yup.string()))
+    ], CryptowalletController.prototype, "getWalletIDFromEmail", null);
+    tslib_1.__decorate([
         convector_core_1.Invokable(),
         tslib_1.__param(0, convector_core_1.Param(yup.string())),
         tslib_1.__param(1, convector_core_1.Param(yup.string())),
         tslib_1.__param(2, convector_core_1.Param(yup.number())),
-        tslib_1.__param(3, convector_core_1.Param(yup.Date())),
-        tslib_1.__param(4, convector_core_1.Param(yup.string()))
+        tslib_1.__param(3, convector_core_1.Param(yup.string())),
+        tslib_1.__param(4, convector_core_1.Param(yup.date())),
+        tslib_1.__param(5, convector_core_1.Param(yup.string()))
     ], CryptowalletController.prototype, "makeTransaction", null);
     tslib_1.__decorate([
         convector_core_1.Invokable(),
@@ -461,7 +412,8 @@ var CryptowalletController = (function (_super) {
         tslib_1.__param(1, convector_core_1.Param(yup.string())),
         tslib_1.__param(2, convector_core_1.Param(yup.number())),
         tslib_1.__param(3, convector_core_1.Param(yup.string())),
-        tslib_1.__param(4, convector_core_1.Param(yup.Date()))
+        tslib_1.__param(4, convector_core_1.Param(yup.string())),
+        tslib_1.__param(5, convector_core_1.Param(yup.date()))
     ], CryptowalletController.prototype, "createMoney", null);
     CryptowalletController = tslib_1.__decorate([
         convector_core_1.Controller('cryptowallet')

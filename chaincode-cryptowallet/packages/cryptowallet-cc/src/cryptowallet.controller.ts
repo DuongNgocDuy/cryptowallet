@@ -9,8 +9,7 @@ import {
 
 import { Cryptowallet } from './models/cryptowallet.model';
 import { Admin } from './models/admin.model';
-import { Moderator } from './models/moderator.model';
-import { Trader } from './models/trader.model';
+import { User } from './models/user.model';
 import { Wallet } from './models/wallet.model';
 
 @Controller('cryptowallet')
@@ -33,17 +32,17 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       const crytowallet = await Cryptowallet.getOne(crytowalletID);
       return crytowallet;
     } catch (error) {
-      console.log('MEGAFYK ERROR:', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
   @Invokable()
-  public async getAllCrytoWalle() {
+  public async getAllCryptoWallet() {
     try {
       const crytowallet = await Cryptowallet.getAll('io.worldsibu.walletchaincode');
       return crytowallet;
     } catch (error) {
-      console.log('MEGAFYK ERROR:', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
@@ -58,33 +57,20 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
     try {
       await admin.save();
     } catch (error) {
-      console.log('MEGAFYK LOGGER:', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
-  //create Trader
+  //create User
   @Invokable()
-  public async createTrader(
-    @Param(Trader)
-    trader: Trader
+  public async createUser(
+    @Param(User)
+    user: User
   ) {
     try {
-      await trader.save();
+      await user.save();
     } catch (error) {
-      console.log('MEGAFYK LOGGER:', error);
-    }
-  }
-
-  //create Moderator
-  @Invokable()
-  public async createModerator(
-    @Param(Moderator)
-    moderator: Moderator
-  ) {
-    try {
-      await moderator.save();
-    } catch (error) {
-      console.log('MEGAFYK LOGGER:', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
@@ -97,7 +83,7 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
     try {
       await wallet.save();
     } catch (error) {
-      console.log('MEGAFYK LOGGER:', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
@@ -115,35 +101,22 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       const user = await Admin.getOne(adminID);
       return user;
     } catch (error) {
-      console.log('MEGAFYK ERROR', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
-  //get Moderator by id
-  @Invokable()
-  public async getModeratorById(
-    @Param(yup.string())
-    modID: string
-  ) {
-    try {
-      const mod = await Moderator.getOne(modID);
-      return mod;
-    } catch (error) {
-      console.log('MEGAFYK ERROR', error);
-    }
-  }
 
-  //get Trader by id
+  //get User by id
   @Invokable()
-  public async getTraderById(
+  public async getUserById(
     @Param(yup.string())
-    traderID: string
+    userID: string
   ) {
     try {
-      const trader = await Trader.getOne(traderID);
-      return trader;
+      const user = await User.getOne(userID);
+      return user;
     } catch (error) {
-      console.log('MEGAFYK ERROR', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
@@ -157,43 +130,33 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       const wallet = await Wallet.getOne(walletID);
       return wallet;
     } catch (error) {
-      console.log('MEGAFYK ERROR', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
   //========================*END*==========================//
 
   //========================*GET ALL*==========================//
-  //get all moderators
+
+  //get all Users
   @Invokable()
-  public async getAllModerators() {
+  public async getAllUsers() {
     try {
-      const moderators = await Moderator.getAll('io.worldsibu.moderator');
-      return moderators;
+      const users = await User.getAll('io.worldsibu.user');
+      return users;
     } catch (error) {
-      console.log("MEGAFYK ERROR:", error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
-  //get all traders
-  @Invokable()
-  public async getAllTraders() {
-    try {
-      const traders = await Trader.getAll('io.worldsibu.trader');
-      return traders;
-    } catch (error) {
-      console.log("MEGAFYK ERROR:", error);
-    }
-  }
-
-  //get all wallets
+  //get all Wallets
   @Invokable()
   public async getAllWallets() {
     try {
       const wallets = await Wallet.getAll('io.worldsibu.wallet');
       return wallets;
     } catch (error) {
-      console.log("MEGAFYK ERROR:", error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
@@ -202,17 +165,26 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
     const storedAdmins = await Admin.getAll('io.worldsibu.admin');
     console.log(storedAdmins);
 
-    const storedModerators = await Moderator.getAll('io.worldsibu.moderator');
-    console.log(storedModerators);
-
-    const storedTraders = await Trader.getAll('io.worldsibu.trader');
-    console.log(storedTraders);
+    const storedUsers = await User.getAll('io.worldsibu.user');
+    console.log(storedUsers);
 
     const storedWallets = await Wallet.getAll('io.worldsibu.wallet');
     console.log(storedWallets);
   }
 
   //========================*END*==========================//
+
+  public async getWalletIDFromEmail(
+    @Param(yup.string())
+    userID: string
+  ){
+    try{
+      const user = await User.getOne(userID);
+      return user.walletID;
+    }catch(error){
+      console.log('ERROR HAPPENED: ', error);
+    }
+  }
 
 
   //Create a transaction between sender and receiver
@@ -224,7 +196,9 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
     receiverID: string,
     @Param(yup.number())
     amount: number,
-    @Param(yup.Date())
+    @Param(yup.string())
+    transactionID: string,
+    @Param(yup.date())
     creationDate: Date,
     @Param(yup.string())
     content: string,
@@ -234,6 +208,7 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       const receiverWallet = await Wallet.getOne(receiverID);
       senderWallet.balance = senderWallet.balance - amount;
       senderWallet.transactionDetails.push({
+        transactionID,
         sender: senderWallet.ownerName,
         receiver: receiverWallet.ownerName,
         amount: amount,
@@ -242,6 +217,7 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       });
       receiverWallet.balance += amount;
       receiverWallet.transactionDetails.push({
+        transactionID,
         sender: senderWallet.ownerName,
         receiver: receiverWallet.ownerName,
         amount: amount,
@@ -251,11 +227,11 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       await senderWallet.save();
       await receiverWallet.save();
     } catch (error) {
-      console.log('MEGAFYK ERROR', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 
-  //admin create money for a trader or moderator
+  //admin create money for a user 
   @Invokable()
   public async createMoney(
     @Param(yup.string())
@@ -265,8 +241,10 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
     @Param(yup.number())
     amountToCreate: number,
     @Param(yup.string())
+    transactionID: string,
+    @Param(yup.string())
     content: string,
-    @Param(yup.Date())
+    @Param(yup.date())
     creationDate: Date,
   ) {
     try {
@@ -275,6 +253,7 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       if (admin.role === 'admin') {
         receiverWallet.balance += amountToCreate;
         receiverWallet.transactionDetails.push({
+          transactionID,
           sender: admin.name,
           receiver: receiverWallet.ownerName,
           amount: amountToCreate,
@@ -284,7 +263,7 @@ export class CryptowalletController extends ConvectorController<ChaincodeTx> {
       }
       await receiverWallet.save();
     } catch (error) {
-      console.log('MEGAFYK ERROR', error);
+      console.log('ERROR HAPPENED: ', error);
     }
   }
 }
